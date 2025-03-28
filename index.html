@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบบันทึกค่าใช้จ่ายส่วนตัวรายวัน</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-5">
+  <div class="container mx-auto">
+    <h1 class="text-3xl font-bold text-center mb-5">Expense Tracker</h1>
+
+    <!-- Form เพิ่มรายการ -->
+    <div class="bg-white shadow-md rounded-lg p-5 mb-5">
+      <h2 class="text-xl font-semibold mb-3">Add Expense</h2>
+      <form id="expenseForm" class="space-y-3">
+        <input type="text" id="title" placeholder="Title" class="w-full p-2 border rounded" required>
+        <input type="number" id="amount" placeholder="Amount" class="w-full p-2 border rounded" required>
+        <select id="category" class="w-full p-2 border rounded" required>
+          <option value="" disabled selected>Select Category</option>
+          <option value="food">Food</option>
+          <option value="transport">Transport</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="others">Others</option>
+        </select>
+        <input type="date" id="date" class="w-full p-2 border rounded" required>
+        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Add Expense</button>
+      </form>
+    </div>
+
+    <!-- แสดงรายการค่าใช้จ่าย -->
+    <div class="bg-white shadow-md rounded-lg p-5">
+      <h2 class="text-xl font-semibold mb-3">Expense List</h2>
+      <ul id="expenseList" class="space-y-3"></ul>
+    </div>
+
+    <!-- รายงาน -->
+    <div class="bg-white shadow-md rounded-lg p-5 mt-5">
+      <h2 class="text-xl font-semibold mb-3">Monthly Report</h2>
+      <ul id="monthlyReport" class="space-y-3"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
